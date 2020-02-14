@@ -28,7 +28,7 @@ function addProjectDetails(e) {
 
 	console.log("User clicked on project " + idNumber);
 
-	$.get("/project/" + idNumber, function(result) {
+	$.get("https://lab6-ivluu.herokuapp.com/project/" + idNumber, function(result) {
 		$("#project" + result['id'] + ' .details').html('<p>' + result['title'] + '<p>' + '<p><small>' + result['date'] +
 		'<img src=' + result['image'] + 'class=detailsImage>' + '<p>' + result['summary'] + '</p>' + '</small></p>');
 	});
